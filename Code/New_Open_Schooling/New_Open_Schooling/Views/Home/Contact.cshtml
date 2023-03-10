@@ -1,0 +1,56 @@
+﻿        //public ActionResult Registration(Tbl_Registration model)
+        //{
+        //    try
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+        //            string hostName = Dns.GetHostName();
+        //            model.ip = Dns.GetHostByName(hostName).AddressList[0].ToString();
+        //            model.DateNow = DateTime.Now.ToString();
+        //            db.Tbl_Registration.Add(model);
+        //            db.SaveChanges();
+
+        //            var data = db.Tbl_Registration.Where(x => x.First_Name == model.First_Name).FirstOrDefault();
+        //            if (model.Upload_Photo != null || model.Upload_Sign != null || model.AgeCertificate != null)
+        //            {
+        //                string file = Path.GetExtension(model.Upload_Photo.FileName);
+
+        //                string Filename = data.Id + file;
+        //                model.Photo = "../Uploads/Photo/" + Filename;
+        //                model.Upload_Photo.SaveAs(Path.Combine(Server.MapPath("~/Uploads/Photo/"), Filename));
+
+        //                string file1 = Path.GetExtension(model.Upload_Sign.FileName);
+
+        //                string Filename1 = data.Id + file1;
+        //                model.Signature = "../Uploads/Signature/" + Filename1;
+        //                model.Upload_Photo.SaveAs(Path.Combine(Server.MapPath("~/Uploads/Signature/"), Filename1));
+
+        //                string file2 = Path.GetExtension(model.AgeCertificate.FileName);
+
+        //                string Filename2 = data.Id + file2;
+        //                model.Age_Certified_Proof = "../Uploads/Signature/" + Filename2;
+        //                model.AgeCertificate.SaveAs(Path.Combine(Server.MapPath("~/Uploads/Signature/"), Filename2));
+
+        //                db.Tbl_Registration.Attach(model);
+        //                db.Entry(model).Property(x => x.Photo).IsModified = true;
+        //                db.Entry(model).Property(x => x.Signature).IsModified = true;
+        //                db.Entry(model).Property(x => x.Age_Certified_Proof).IsModified = true;
+        //                db.SaveChanges();
+        //                TempData["Msg"] = "save successfully...!";
+        //                ModelState.Clear();
+        //                return View("Registration");
+
+        //            }
+        //            return View();
+        //        }
+        //        else
+        //        {
+        //            return View();
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        TempData["Msg"] = "Not save successfully...!";
+        //        return RedirectToAction("Registration");
+        //    }
+        //}

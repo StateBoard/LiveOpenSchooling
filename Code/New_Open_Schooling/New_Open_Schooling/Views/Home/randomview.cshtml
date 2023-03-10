@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "randomview";
+}
+
+<h2>randomview</h2>
+
+<div id="test">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+        Get_Inspection_Record();
+
+
+    });
+    function Get_Inspection_Record() {
+        debugger
+           var data = '@TempData["test"]';
+	       alert(data);
+	       $('#test').html('<h2>'+data+'</h2>');
+        }
+
+</script>
+
